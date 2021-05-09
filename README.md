@@ -5,7 +5,7 @@ React Native Responsive Bootstrap Grid
 ## Getting Started 
 This library aims to ease the use of the same React Native codebase for mobile and web applications by porting  [Bootstrap 5](https://getbootstrap.com/docs/5.0/layout/grid/) flexbox grid system to React Native. 
 
-It includes the same twelve column system and six responsive tiers of Bootstrap, and uses the same classes names. It uses [matchmediaquery](https://github.com/ncochard/matchmediaquery) to evaluate media queries both in the web and mobile applications, with [@expo/match-media](https://github.com/expo/match-media) as polyfill for mobile application.
+It includes the same twelve column system and six responsive tiers of Bootstrap, and uses the same classes names. It uses [matchmediaquery](https://github.com/ncochard/matchmediaquery) to evaluate media queries both in the web and mobile applications, with [@expo/match-media](https://github.com/expo/match-media) as polyfill for mobile applications.
 
 Styles classes are defined with [StyleSheet](https://reactnative.dev/docs/stylesheet), taking advantage of the performance and memory optimizations it provides. 
 
@@ -26,6 +26,10 @@ yarn add react-native-rbg
 
 
 ## Usage
+
+### Snack
+
+You can try the library right away on this [snack](https://snack.expo.io/@t-medina/github.com-t-medina-react-native-rbg-sample); its code is available on this [git repository](https://github.com/t-medina/react-native-rbg-sample).
 
 ### Bootstrap classes
 
@@ -80,7 +84,7 @@ export default function App() {
 
 It defines a prop named `classes`, which can be either an Array where each item is a responsive class, or a String where responsive classes are separated by space.
 
-Under the hood is replaced with a **View** component, and evaluates the media queries to apply the appropriate styling, so you can expect it to behave in the exact same way as a **View**. Support for common **View** props will be added in a future, for now only `style` is supported.  
+Under the hood **RView** is replaced with a **View** component and evaluates the media queries to apply the appropriate styling, so you can expect it to behave in the exact same way as a **View**. Support for common **View** props will be added in a future, for now only `styl` is supported.  
 
 ```javascript 
 export default function App() {
@@ -88,7 +92,7 @@ export default function App() {
     <RGrid>
         <RView classes="container">
             <RView classes="row">
-                <RView classes={["col", "col-lg-2"]}>
+                <RView classes="col col-lg-2">
                     <Text>1 of 3</Text>
                 </RView>
 
@@ -96,7 +100,7 @@ export default function App() {
                     <Text>Variable width content</Text>
                 </RView>
 
-                <RView classes="col col-lg-2">
+                <RView classes={["col", "col-lg-2"]}>
                     <Text>3 of 3</Text>
                 </RView>
             </RView>
@@ -114,7 +118,7 @@ export default function App() {
     <RGrid>
         <RView classes="container">
             <RView classes="row">
-                <RView classes={["col", "col-lg-2"]} style={styles.column}>
+                <RView classes="col col-lg-2" style={styles.column}>
                     <Text>1 of 3</Text>
                 </RView>
 
@@ -122,7 +126,7 @@ export default function App() {
                     <Text>Variable width content</Text>
                 </RView>
 
-                <RView classes="col col-lg-2" style={styles.column}>
+                <RView classes={["col", "col-lg-2"]} style={styles.column}>
                     <Text>3 of 3</Text>
                 </RView>
             </RView>

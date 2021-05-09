@@ -29,7 +29,7 @@ yarn add react-native-rbg
 
 ### Snack
 
-You can try the library right away on this [snack](https://snack.expo.io/@t-medina/github.com-t-medina-react-native-rbg-sample); its code is available on this [git repository](https://github.com/t-medina/react-native-rbg-sample).
+You can try the library right away on this [snack](https://snack.expo.io/@t-medina/react-native-rbg-sample); its code is available on this [git repository](https://github.com/t-medina/react-native-rbg-sample).
 
 ### Bootstrap classes
 

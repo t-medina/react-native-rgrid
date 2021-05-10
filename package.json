@@ -1,6 +1,6 @@
 {
-  "name": "react-native-rbg",
-  "version": "1.0.1",
+  "name": "react-native-rgrid",
+  "version": "1.0.0",
   "description": "Bootstrap's flexbox grid system for React Native",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/t-medina/react-native-rbg.git"
+    "url": "git+https://github.com/t-medina/react-native-rgrid.git"
   },
   "keywords": [
     "react-native",
@@ -16,15 +16,16 @@
     "bootstrap",
     "responsive",
     "flexbox",
+    "mediaquery",
     "layout",
-    "mediaquery"
+    "rgrid"
   ],
   "author": "Tania Medina",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/t-medina/react-native-rbg/issues"
+    "url": "https://github.com/t-medina/react-native-rgrid/issues"
   },
-  "homepage": "https://github.com/t-medina/react-native-rbg#readme",
+  "homepage": "https://github.com/t-medina/react-native-rgrid#readme",
   "peerDependencies": {
     "react": "*",
     "react-native": ">=0.50.0"

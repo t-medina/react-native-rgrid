@@ -1,4 +1,4 @@
-# React Native RBG
+# React Native RGrid
 React Native Responsive Bootstrap Grid 
 
 
@@ -15,13 +15,13 @@ Styles classes are defined with [StyleSheet](https://reactnative.dev/docs/styles
 Using npm:
 
 ```shell
-npm install --save react-native-rbg
+npm install --save react-native-rgrid
 ```
 
 or using yarn:
 
 ```shell
-yarn add react-native-rbg
+yarn add react-native-rgrid
 ```
 
 
@@ -29,13 +29,13 @@ yarn add react-native-rbg
 
 ### Snack
 
-You can try the library right away on this [snack](https://snack.expo.io/@t-medina/react-native-rbg-sample); its code is available on this [git repository](https://github.com/t-medina/react-native-rbg-sample).
+You can try the library right away on this [snack](https://snack.expo.io/@t-medina/react-native-rgrid-sample); its code is available on this [git repository](https://github.com/t-medina/react-native-rgrid-sample).
 
 ### Bootstrap classes
 
 The Grid system has been implemented following the same Bootstrap [guidelines](https://getbootstrap.com/docs/5.0/layout/grid/). The [breakpoints](https://getbootstrap.com/docs/5.0/layout/breakpoints/) have been configured with the same values as the **Bootstrap grid system** and they work in the [same way](https://getbootstrap.com/docs/5.0/layout/grid/#how-it-works).  
 
-The following is a list of the Bootstrap classes you will be able to use with **react-native-rbg**:
+The following is a list of the Bootstrap classes you will be able to use with **react-native-rgrid**:
 * All of the [container classes](https://getbootstrap.com/docs/5.0/layout/containers/):
     * `container`
     * `container-sm`
@@ -71,7 +71,7 @@ It should be used only once in the application:
 export default function App() {
   return (
     <RGrid>
-        <Text>React Native RBG</Text>
+        <Text>React Native RGrid</Text>
     </RGrid>
   );
 }

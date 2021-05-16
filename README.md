@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.com/t-medina/react-native-rgrid.svg?branch=develop)](https://travis-ci.com/t-medina/react-native-rgrid)
+[![Coverage Status](https://coveralls.io/repos/github/t-medina/react-native-rgrid/badge.svg?branch=develop)](https://coveralls.io/github/t-medina/react-native-rgrid?branch=main)
+
 # React Native RGrid
 React Native Responsive Bootstrap Grid 
 

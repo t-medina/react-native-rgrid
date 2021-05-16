@@ -4,11 +4,14 @@ import * as PropTypes from "prop-types";
 import Grid from "../Grid";
 
 
-class ResponsiveView extends React.Component {
+class RView extends React.Component {
 
     unsubscribe;
 
     componentDidMount() {
+        if (!Grid.isBuilt())
+            throw new Error("RView can't be included without first including RGrid");
+
         this.unsubscribe = Grid.onDimensionsUpdated(() => this.forceUpdate());
     }
 
@@ -21,8 +24,8 @@ class ResponsiveView extends React.Component {
     render() {
         const { classes, style } = this.props;
 
-        const responsiveClasses = Array.isArray(classes) ? classes : classes.split(" ");
-        const responsiveStyles  = Grid.getActiveStyles(responsiveClasses);
+        const responsiveClasses = classes ? (Array.isArray(classes) ? classes : classes.split(" ")) : [];
+        const responsiveStyles  = responsiveClasses.length > 0 ? Grid.getActiveStyles(responsiveClasses) : [];
 
         const compoundStyles = responsiveStyles.concat(style);
 
@@ -32,9 +35,14 @@ class ResponsiveView extends React.Component {
     }
 }
 
-ResponsiveView.propTypes = {
+RView.propTypes = {
     style: PropTypes.any,
-    classes: PropTypes.any
+    classes: PropTypes.oneOfType([PropTypes.string, PropTypes.array])
 }
 
-export default ResponsiveView;
+RView.defaultProps = {
+    style: [],
+    classes: []
+};
+
+export default RView;

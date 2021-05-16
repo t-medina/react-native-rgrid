@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RView Styles: given an array style prop is passed, the styles are propagated to the generated View 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+      },
+      Object {
+        "fontColor": "#000",
+      },
+    ]
+  }
+/>
+`;
+
+exports[`RView Styles: given an empty style prop is passed, the component renders without styles 1`] = `
+<View
+  style={
+    Array [
+      Object {},
+    ]
+  }
+/>
+`;
+
+exports[`RView Styles: given an object style prop is passed, the styles are propagated to the generated View 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+      },
+    ]
+  }
+/>
+`;
+
+exports[`RView and Grid classes: given a combination of valid and invalid String array classes, the component retrieves the responsive styles 1`] = `
+<View
+  style={
+    Array [
+      "style-col-12",
+      "style-col-md-4",
+    ]
+  }
+/>
+`;
+
+exports[`RView and Grid classes: given a combination of valid and invalid String classes, the component retrieves the responsive styles 1`] = `
+<View
+  style={
+    Array [
+      "style-col-12",
+      "style-col-md-4",
+    ]
+  }
+/>
+`;
+
+exports[`RView and Grid classes: given a non valid String array class, the component renders successfully 1`] = `
+<View
+  style={Array []}
+/>
+`;
+
+exports[`RView and Grid classes: given a non valid String class, the component renders successfully 1`] = `
+<View
+  style={Array []}
+/>
+`;
+
+exports[`RView and Grid classes: given an empty classes prop is passed, the component renders without styles 1`] = `
+<View
+  style={Array []}
+/>
+`;
+
+exports[`RView and Grid classes: given one valid String array class, the component retrieves the responsive styles 1`] = `
+<View
+  style={
+    Array [
+      "style-col-12",
+    ]
+  }
+/>
+`;
+
+exports[`RView and Grid classes: given one valid String class, the component retrieves the responsive styles 1`] = `
+<View
+  style={
+    Array [
+      "style-col-12",
+    ]
+  }
+/>
+`;
+
+exports[`RView component render: given a RView with one child, the component renders successfully 1`] = `
+<View
+  style={Array []}
+>
+  <Text>
+    Sample content
+  </Text>
+</View>
+`;
+
+exports[`RView component render: given an empty RView, the component renders successfully 1`] = `
+<View
+  style={Array []}
+/>
+`;

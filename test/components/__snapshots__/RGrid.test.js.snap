@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RGrid: given a RGrid with one child, the component renders successfully 1`] = `
+<Text>
+  Sample content
+</Text>
+`;
+
+exports[`RGrid: given an empty RGrid, the component renders successfully 1`] = `null`;

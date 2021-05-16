@@ -4,7 +4,8 @@
   "description": "Bootstrap's flexbox grid system for React Native",
   "main": "src/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
@@ -44,6 +45,7 @@
     "@unimodules/core": "*",
     "@unimodules/react-native-adapter": "*",
     "babel-jest": "^26.6.3",
+    "coveralls": "^3.1.0",
     "jest": "^26.6.3",
     "metro-react-native-babel-preset": "^0.66.0",
     "react": "^16.13.0",

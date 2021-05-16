@@ -2,17 +2,16 @@ import React from 'react';
 import Grid from "../Grid";
 
 
-class ResponsiveGrid extends React.Component {
+class RGrid extends React.Component {
 
     state = {
         gridReady: false
     }
 
     componentDidMount() {
-        Grid.build({}, () => {
-            this.setState({
-                gridReady: true
-            });
+        Grid.build();
+        this.setState({
+            gridReady: true
         });
     }
 
@@ -26,4 +25,4 @@ class ResponsiveGrid extends React.Component {
     }
 }
 
-export default ResponsiveGrid;
+export default RGrid;

@@ -32,6 +32,16 @@ const NoActiveColumnClass = "no-column";
 const DimensionsUpdated = "DimensionsUpdated";
 
 
+let isReady = false;
+let properties = {};
+let eventEmitter;
+let classes;
+let classesDefinition;
+let activeStyles = {};
+let activeBreakpoints = {};
+let biggestActiveBreakpoint;
+
+
 const matchBreakpoints = (breakpoints) => ({
     xs: true,
     sm: matchMedia("(min-width: " + breakpoints.sm + "px)").matches,
@@ -174,21 +184,11 @@ const getActiveColumnStyles = (columnClasses) => {
         return properties.breakpoints[aBreakpoint] - properties.breakpoints[bBreakpoint];
     });
 
-    const activeStyles = columnClasses.filter(responsiveClass => activeStyles[responsiveClass] !== undefined)
+    const activeColumnStyles = columnClasses.filter(responsiveClass => activeStyles[responsiveClass] !== undefined)
         .map(responsiveClass => activeStyles[responsiveClass]);
 
-    return activeStyles.length > 0 ? activeStyles : [ classes[NoActiveColumnClass] ];
+    return activeColumnStyles.length > 0 ? activeColumnStyles : [ classes[NoActiveColumnClass] ];
 }
-
-
-let isReady = false;
-let properties = {};
-let eventEmitter;
-let classes;
-let classesDefinition;
-let activeStyles = {};
-let activeBreakpoints = {};
-let biggestActiveBreakpoint;
 
 
 

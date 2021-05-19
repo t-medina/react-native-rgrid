@@ -1,7 +1,6 @@
 import '@expo/match-media'
 import matchMedia from 'matchmediaquery';
 import {Dimensions, StyleSheet} from "react-native";
-import isEqual from "lodash.isequal";
 import EventEmitter from 'eventemitter3';
 
 
@@ -142,8 +141,9 @@ const buildContainersClasses = (breakpoints, containerMaxWidths) => {
 
 const updateGrid = () => {
     const matchedBreakpoints = matchBreakpoints(properties.breakpoints);
+    const breakpointsHaveChanged = JSON.stringify(activeBreakpoints) !== JSON.stringify(matchedBreakpoints)
 
-    if (!isEqual(activeBreakpoints, matchedBreakpoints)) {
+    if (breakpointsHaveChanged) {
         activeBreakpoints = matchedBreakpoints;
         biggestActiveBreakpoint = getBiggestActiveBreakpoint(activeBreakpoints);
         activeStyles = updateActiveStyles();
@@ -246,4 +246,4 @@ export default {
     isBuilt: isBuilt,
     getActiveStyles: getActiveStyles,
     onDimensionsUpdated: onDimensionsUpdated
-}
+};

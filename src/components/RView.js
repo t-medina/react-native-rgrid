@@ -6,7 +6,7 @@ import Grid from "../Grid";
 
 class RView extends React.Component {
 
-    unsubscribe;
+    unsubscribe
 
     componentDidMount() {
         if (!Grid.isBuilt())

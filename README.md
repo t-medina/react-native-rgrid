@@ -1,8 +1,13 @@
+# React Native RGrid
+React Native Responsive Bootstrap Grid 
+
+[![npm version](https://img.shields.io/npm/v/react-native-rgrid.svg)](https://www.npmjs.org/package/react-native-rgrid)
 [![Build Status](https://travis-ci.com/t-medina/react-native-rgrid.svg?branch=develop)](https://travis-ci.com/t-medina/react-native-rgrid?branch=develop)
 [![Coverage Status](https://coveralls.io/repos/github/t-medina/react-native-rgrid/badge.svg?branch=develop)](https://coveralls.io/github/t-medina/react-native-rgrid?branch=develop)
 
-# React Native RGrid
-React Native Responsive Bootstrap Grid 
+[![dependencies Status](https://status.david-dm.org/gh/t-medina/react-native-rgrid.svg)](https://david-dm.org/t-medina/react-native-rgrid)
+[![devDependencies Status](https://status.david-dm.org/gh/t-medina/react-native-rgrid.svg?type=dev)](https://david-dm.org/t-medina/react-native-rgrid?type=dev)
+[![peerDependencies Status](https://status.david-dm.org/gh/t-medina/react-native-rgrid.svg?type=peer)](https://david-dm.org/t-medina/react-native-rgrid?type=peer)
 
 
 ## Getting Started 

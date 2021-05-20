@@ -225,7 +225,7 @@ const getActiveStyles = (classes) => {
 
 	const rowClass = validClasses.find(_class => _class.includes("row"));
 	if (rowClass !== undefined)
-		return getActiveRowStyles(rowClass);
+		return getActiveRowStyles();
 
 	const columnClasses = validClasses.filter(_class => _class.includes("col"));
 	if (columnClasses.length > 0)

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {View} from "react-native";
 import * as PropTypes from "prop-types";
 import Grid from "../Grid";
@@ -6,43 +6,48 @@ import Grid from "../Grid";
 
 class RView extends React.Component {
 
-    unsubscribe
+	unsubscribe;
 
-    componentDidMount() {
-        if (!Grid.isBuilt())
-            throw new Error("RView can't be included without first including RGrid");
 
-        this.unsubscribe = Grid.onDimensionsUpdated(() => this.forceUpdate());
-    }
+	componentDidMount () {
+		if (!Grid.isBuilt()) {
+			throw new Error("RView can't be included without first including RGrid");
+		}
 
-    componentWillUnmount() {
-        if (this.unsubscribe) {
-            this.unsubscribe();
-        }
-    }
+		this.unsubscribe = Grid.onDimensionsUpdated(() => this.forceUpdate());
+	}
 
-    render() {
-        const { classes, style } = this.props;
+	componentWillUnmount() {
+		if (this.unsubscribe) {
+			this.unsubscribe();
+		}
+	}
 
-        const responsiveClasses = classes ? (Array.isArray(classes) ? classes : classes.split(" ")) : [];
-        const responsiveStyles  = responsiveClasses.length > 0 ? Grid.getActiveStyles(responsiveClasses) : [];
+	render() {
+		const {classes, style} = this.props;
 
-        const compoundStyles = responsiveStyles.concat(style);
+		const responsiveClasses = classes ? (Array.isArray(classes) ? classes : classes.split(" ")) : [];
+		const responsiveStyles = responsiveClasses.length > 0 ? Grid.getActiveStyles(responsiveClasses) : [];
 
-        return (
-            <View style={compoundStyles} children={this.props.children} />
-        );
-    }
+		const compoundStyles = responsiveStyles.concat(style);
+
+		return (
+			<View style={compoundStyles}>
+				{this.props.children}
+			</View>
+		);
+	}
 }
 
 RView.propTypes = {
-    style: PropTypes.any,
-    classes: PropTypes.oneOfType([PropTypes.string, PropTypes.array])
-}
+	style: PropTypes.any,
+	classes: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+	children: PropTypes.node
+};
 
 RView.defaultProps = {
-    style: [],
-    classes: []
+	style: [],
+	classes: []
 };
 
 export default RView;

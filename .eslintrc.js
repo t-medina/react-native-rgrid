@@ -9,6 +9,7 @@ module.exports = {
 		"plugin:react/recommended",
 		"plugin:react-native/all"
 	],
+	"parser": "@babel/eslint-parser",
 	"parserOptions": {
 		"ecmaFeatures": {
 			"jsx": true
@@ -20,6 +21,11 @@ module.exports = {
 		"react",
 		"react-native"
 	],
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	},
 	"rules": {
 		"indent": [
 			"error",

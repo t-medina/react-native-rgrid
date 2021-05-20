@@ -1,6 +1,17 @@
 language: node_js
 node_js:
   - '15'
-install: yarn install
-script: yarn test
-after_success: yarn coverage
+
+jobs:
+  include:
+    - stage: "Linting and Unit Tests"
+      name: "Linting"
+      install:
+        - yarn install
+      script: yarn lint
+    - name: "Unit Tests"
+      install:
+        - yarn install
+      script: yarn test
+      after_success:
+        - yarn coverage

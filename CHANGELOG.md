@@ -13,6 +13,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Linting job on CI configuration
 - [Prettier](https://prettier.io/) support
 
+### Changed
+
+- `lodash.isequal` is no longer a dependency, having been replaced by custom comparison code
+- `prop-types` has been changed to a **devDependency**
+- Improved Readme file
+
 ## [1.0.1] - 2021-05-16
 
 ### Added

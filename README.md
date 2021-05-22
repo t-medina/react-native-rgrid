@@ -21,6 +21,53 @@ It includes the same twelve column system and six responsive tiers of Bootstrap,
 
 Styles classes are defined with [StyleSheet](https://reactnative.dev/docs/stylesheet), taking advantage of the performance and memory optimizations it provides.
 
+A quick sample, mimicking Bootstraps [mix and match](https://getbootstrap.com/docs/5.0/layout/grid/#mix-and-match) sample can be seen below:
+
+|                                                                Portrait: 393px width                                                                 |                                                                 Landscape: 851px width                                                                 |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------: |
+| <img src="https://thehappycricket-public.s3-eu-west-1.amazonaws.com/react-native-rgrid/portrait.jpg" width="200" alt="Portrait Sample: 393px width"> | <img src="https://thehappycricket-public.s3-eu-west-1.amazonaws.com/react-native-rgrid/landscape.jpg" width="400" alt="Landscape Sample: 851px width"> |
+
+with the code to create it:
+
+```javascript
+<RGrid>
+  <RView classes="container-fluid">
+    {/*Stack the columns on mobile by making one full-width and the other half-width*/}
+    <RView classes="row">
+      <RView classes="col-md-8">
+        <Text>col-md-8</Text>
+      </RView>
+      <RView classes="col-6 col-md-4">
+        <Text>col-6 col-md-4</Text>
+      </RView>
+    </RView>
+
+    {/*Columns start at 50% wide on mobile and bump up to 33.3% wide on wider screens*/}
+    <RView classes="row">
+      <RView classes="col-6 col-md-4">
+        <Text>col-6 col-md-4</Text>
+      </RView>
+      <RView classes="col-6 col-md-4">
+        <Text>col-6 col-md-4</Text>
+      </RView>
+      <RView classes="col-6 col-md-4">
+        <Text>col-6 col-md-4</Text>
+      </RView>
+    </RView>
+
+    {/*Columns are always 50% wide*/}
+    <RView classes="row">
+      <RView classes="col-6">
+        <Text>col-6</Text>
+      </RView>
+      <RView classes="col-6">
+        <Text>col-6</Text>
+      </RView>
+    </RView>
+  </RView>
+</RGrid>
+```
+
 ## Installation
 
 Using npm:
@@ -35,15 +82,15 @@ or using yarn:
 yarn add react-native-rgrid
 ```
 
-## Usage
-
-### Snack
+## Demo Snack
 
 You can try the library right away on this [snack](https://snack.expo.io/@t-medina/react-native-rgrid-sample); its code is available on this [git repository](https://github.com/t-medina/react-native-rgrid-sample).
 
+## Usage
+
 ### Bootstrap classes
 
-The Grid system has been implemented following the same Bootstrap [guidelines](https://getbootstrap.com/docs/5.0/layout/grid/). The [breakpoints](https://getbootstrap.com/docs/5.0/layout/breakpoints/) have been configured with the same values as the **Bootstrap grid system** and they work in the [same way](https://getbootstrap.com/docs/5.0/layout/grid/#how-it-works).
+The Grid system has been implemented following the same Bootstrap [guidelines](https://getbootstrap.com/docs/5.0/layout/grid/). The [breakpoints](https://getbootstrap.com/docs/5.0/layout/breakpoints/) have been configured with the same values as the **Bootstrap grid system** and they work in the exact [same way](https://getbootstrap.com/docs/5.0/layout/grid/#how-it-works).
 
 The following is a list of the Bootstrap classes you will be able to use with **react-native-rgrid**:
 
@@ -94,7 +141,7 @@ export default function App() {
 
 It defines a prop named `classes`, which can be either an Array where each item is a responsive class, or a String where responsive classes are separated by space.
 
-Under the hood **RView** is replaced with a **View** component and evaluates the media queries to apply the appropriate styling, so you can expect it to behave in the exact same way as a **View**. Support for common **View** props will be added in a future, for now only `styl` is supported.
+Under the hood **RView** is replaced with a **View** component and evaluates the media queries to apply the appropriate styling, so you can expect it to behave in the exact same way as a **View**. Support for common **View** props will be added in a future, for now only `style` is supported.
 
 ```javascript
 export default function App() {

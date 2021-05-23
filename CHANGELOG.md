@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.3] - 2021-05-23
+
+### Fixed
+
+- Wrong version published
+
 ## [1.0.2] - 2021-05-23
 
 ### Added
@@ -45,7 +51,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `col-auto`
   - `col-{breakpoint}-auto`
 
-[unreleased]: https://github.com/t-medina/react-native-rgrid/compare/v1.0.2...develop
+[unreleased]: https://github.com/t-medina/react-native-rgrid/compare/v1.0.3...develop
+[1.0.3]: https://github.com/t-medina/react-native-rgrid/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/t-medina/react-native-rgrid/compare/1.0.1...v1.0.2
 [1.0.1]: https://github.com/t-medina/react-native-rgrid/compare/1.0.0...1.0.1
 [1.0.0]: https://github.com/t-medina/react-native-rgrid/releases/tag/1.0.0
